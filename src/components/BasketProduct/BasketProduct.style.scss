@@ -1,0 +1,177 @@
+.basket-product {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  &__index {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    background-color: $color-basket-nav;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__info {
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    gap: 5%;
+  }
+
+  &__image {
+    min-width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 10rem;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__desc {
+    &__title {
+      color: $color-font;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    &__brand {
+      &__title {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $color-basket-font-light;
+      }
+
+      &__value {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: $color-basket-font-normal;
+      }
+    }
+
+    &__stock,
+    &__discount {
+      &__title {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: $color-basket-font-light;
+      }
+
+      &__value {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: $color-basket-font-normal;
+      }
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    font-size: 1.6rem;
+
+    &__old {
+      position: relative;
+      color: $color-basket-font-light;
+      font-weight: 400;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 50%;
+        background-color: $color-font-inactive;
+      }
+    }
+
+    &__actual {
+      color: $color-basket-font-normal;
+      font-weight: 500;
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__minus,
+    &__plus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &__value {
+      text-align: center;
+      min-width: 2.5rem;
+    }
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+    font-size: 1.6rem;
+
+    &__old {
+      position: relative;
+      color: $color-basket-font-light;
+      font-weight: 400;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 50%;
+        background-color: $color-font-inactive;
+      }
+    }
+
+    &__actual {
+      font-weight: 700;
+      color: $color-secondary;
+    }
+  }
+
+  &__remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__descriotion {
+    &__value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      display: -webkit-box;
+      line-clamp: 2;
+      box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

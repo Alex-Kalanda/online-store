@@ -1,0 +1,23 @@
+.grid {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  position: relative;
+
+  &__empty {
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  &.grid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.grid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

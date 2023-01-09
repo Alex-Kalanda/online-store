@@ -1,0 +1,38 @@
+@mixin button($width: 130px, $height: 40px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+  font-family: CeraProMedium, arial, serif;
+  font-weight: 500;
+  border-radius: 6px;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 0 1rem $color-primary);
+    color: $color-primary;
+    background-color: #fff;
+  }
+}
+
+@mixin product-label() {
+  padding: 0.5rem 1rem;
+  background-color: $color-primary;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@mixin basket-subheader-box() {
+  height: 3rem;
+  min-width: 3rem;
+  border: 1px solid $color-basket-nav;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

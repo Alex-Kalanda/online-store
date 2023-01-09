@@ -1,0 +1,62 @@
+@import "./normalize";
+@import "./fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  font-size: 10px;
+  height: 100%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: CeraProReg, arial, serif;
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: $color-font;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.4rem 0 0;
+}
+
+.h2 {
+  font-size: 2.8rem;
+  color: $color-font;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.added {
+  filter: drop-shadow(0 0 1rem $color-primary);
+  color: $color-primary;
+  background-color: #fff;
+}
+
+.header,
+.footer {
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 0 auto;
+}

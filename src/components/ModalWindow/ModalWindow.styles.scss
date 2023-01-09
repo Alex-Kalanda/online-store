@@ -1,0 +1,217 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 80%);
+  font-size: 1.4rem;
+}
+
+.modal-content {
+  position: absolute;
+  left: 50%;
+  top: 50vh;
+  z-index: 20;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  width: 40rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem 5rem;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background-color: $color-primary;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    background-color: $color-primary;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  &__personal-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__title {
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      font-size: 2.2rem;
+      color: #fff;
+    }
+
+    &__item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &__title {
+        &__mark {
+          color: $color-primary;
+        }
+      }
+
+      &__value {
+        display: flex;
+        gap: 1rem;
+
+        &__input {
+          width: 100%;
+          height: 3rem;
+          border: 1px solid $color-primary;
+
+          &:focus {
+            outline: none;
+            border: 1px solid $color-basket-font-light;
+          }
+        }
+
+        &__error-message {
+          width: 4rem;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__card-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    &__title {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    &__card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+      background-color: $color-primary;
+      border-radius: 2rem;
+      color: #fff;
+      padding: 2.5rem 1.3rem;
+
+      &__number {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+
+        img {
+          width: 3.5rem;
+          border-radius: 0.8rem;
+        }
+
+        input {
+          width: 100%;
+        }
+      }
+
+      &__other {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__valid,
+        &__cvv {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.4rem;
+        }
+
+        &__valid {
+          input {
+            width: 13rem;
+          }
+        }
+
+        &__cvv {
+          input {
+            width: 4.5rem;
+          }
+        }
+      }
+
+      input {
+        background-color: $color-basket-font-light;
+        border-radius: 0.8rem;
+
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    @include button(15rem, 3.5rem);
+
+    margin-bottom: 2rem;
+  }
+}
+
+.overflow {
+  overflow-y: hidden;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 4rem;
+  color: $color-primary;
+}
+
+.order-complete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 2rem;
+  font-family: CeraProBold, arial, serif;
+  color: #fff;
+  background-color: rgb(0 0 0 / 80%);
+  text-align: center;
+}

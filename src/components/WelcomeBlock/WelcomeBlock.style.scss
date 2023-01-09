@@ -1,0 +1,43 @@
+.shopnow {
+  height: 38.5rem;
+  width: 100%;
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    width: 50%;
+    font-size: 5.7rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $color-font;
+
+    &_red {
+      color: $color-primary;
+    }
+  }
+
+  &__button {
+    @include button(14rem, 4rem);
+  }
+}

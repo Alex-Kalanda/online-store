@@ -1,0 +1,15 @@
+.filters {
+  margin-left: 1.5rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__category {
+    padding-left: 1.5rem;
+  }
+
+  &__brand {
+    padding-left: 1.5rem;
+  }
+}

@@ -1,0 +1,169 @@
+.product-details {
+  display: flex;
+  gap: 5%;
+  font-size: 1.6rem;
+
+  &__photos {
+    display: flex;
+    gap: 5%;
+    width: 45%;
+
+    &__general {
+      width: 74%;
+    }
+
+    .general-photo {
+      width: 100%;
+      border-radius: 2rem;
+    }
+  }
+
+  &__information {
+    width: 50%;
+
+    &__title {
+      font-family: CeraProBold, arial, serif;
+      font-size: 2.8rem;
+      margin: 0 0 1.4rem;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2.2rem;
+      padding-bottom: 1.3rem;
+      border-bottom: 0.3px solid rgb(37 113 67 / 20%);
+      margin-bottom: 1.3rem;
+    }
+
+    &__prices {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      &__new {
+        font-weight: 700;
+        color: $color-secondary;
+      }
+
+      &__old {
+        font-weight: 400;
+        color: $color-font-inactive;
+        text-decoration: line-through;
+      }
+    }
+
+    &__rating {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      justify-content: space-between;
+      gap: 1rem;
+
+      &__indicator {
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        width: 59%;
+        scale: 0.99;
+        background-color: $color-rating;
+      }
+
+      &__stars {
+        position: relative;
+        height: 3.5rem;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    &__category,
+    &__brand,
+    &__stock,
+    &__discont {
+      margin-bottom: 1.3rem;
+    }
+
+    &__category__title,
+    &__brand__title,
+    &__stock__title,
+    &__discont__title,
+    &__description__title {
+      font-family: CeraProBold, arial, serif;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__description__title {
+      margin-bottom: 1rem;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 2.5rem 0;
+
+      &_buy {
+        @include button(20%);
+      }
+
+      &_basket {
+        @include button(40%);
+      }
+    }
+  }
+}
+
+.big-image {
+  &.container {
+    filter: none;
+    position: absolute;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__fade {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 56;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    max-width: 60rem;
+    max-height: 60rem;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

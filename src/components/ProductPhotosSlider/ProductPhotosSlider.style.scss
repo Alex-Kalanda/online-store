@@ -1,0 +1,21 @@
+.product-details__photos__slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2.2rem;
+  width: 21%;
+}
+
+.slider__item {
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+}
+
+.active {
+  filter: drop-shadow(0 0 2rem #ffda2d);
+}

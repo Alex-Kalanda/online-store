@@ -1,0 +1,52 @@
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 1rem 0;
+  width: 100%;
+  color: $color-primary;
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__authors-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__github {
+    position: relative;
+    padding-left: 3rem;
+  }
+
+  &__github::before {
+    position: absolute;
+    content: "";
+    top: -0.3rem;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../../../assets/svg/github-dark.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  &__github:hover {
+    transition: 0.3s;
+  }
+
+  &__year {
+    justify-self: center;
+  }
+
+  &__rsschool {
+    justify-self: end;
+
+    img {
+      width: 8rem;
+    }
+  }
+}
